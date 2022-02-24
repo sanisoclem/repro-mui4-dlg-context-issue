@@ -1,0 +1,1 @@
+Minimal example of MUI4's dialog breaking react context.
