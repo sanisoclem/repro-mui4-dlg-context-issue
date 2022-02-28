@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
-import * as MuiV0 from "material-ui/styles";
+import React from "react";
 import { createTheme, MuiThemeProvider } from "@material-ui/core/styles";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
 
 const ThemeProviderComponent = ({ children }) => {
   const theme = {
@@ -49,7 +47,6 @@ const ThemeProviderComponent = ({ children }) => {
       primary2Color: theme.palette.primary1Color,
     },
   };
-  const themeV0 = getMuiTheme(customTheme);
   const themeV4 = createTheme({
     palette: {
       primary: {
@@ -59,12 +56,9 @@ const ThemeProviderComponent = ({ children }) => {
     typography: { button: {} },
   });
 
-  console.log(themeV0, themeV4);
   return (
     <MuiThemeProvider theme={themeV4}>
-      <MuiV0.MuiThemeProvider muiTheme={themeV0}>
         {children}
-      </MuiV0.MuiThemeProvider>
     </MuiThemeProvider>
   );
 };

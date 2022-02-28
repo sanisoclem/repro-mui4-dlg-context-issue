@@ -1,7 +1,7 @@
 import * as React from "react";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import { Button } from "@material-ui/core";
-import Dialog from "material-ui/Dialog";
+import Dialog from "@material-ui/core/Dialog";
 
 // Translated messages in French with matching IDs to what you declared
 const messagesInFrench = {
